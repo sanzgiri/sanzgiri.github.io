@@ -50,9 +50,5 @@ Image(filename='p2.png')
     URL screenshot for https://phantomjs.org/screen-capture.html saved to p2.png
 
 
-
-
-
 ![png](2020-01-29-Grab-URL-screenshot_files/output_2_1.png)
 
-![png](logo.png)
