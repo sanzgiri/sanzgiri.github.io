@@ -1,10 +1,9 @@
 ---
-toc: False
 title: Grab URL Screenshot
-
+date: 2020-01-29 01:30:00 
+permalink: "/2020-01-29-Grab-URL-screenshot.md"
+layout: post
 keywords: fastai
-sidebar: home_sidebar
-
 summary: "Grab a screenshot of web page using a "headless" chrome browser"
 ---
 <!--
