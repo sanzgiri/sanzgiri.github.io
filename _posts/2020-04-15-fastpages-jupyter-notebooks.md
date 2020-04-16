@@ -14,4 +14,4 @@
 
 * Add the notebooks to <repo>/_notebooks. Specific rules for how to customize your notebook so that it looks "good" when coverted to a blog post can be seen here: https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter
 
-* That is basically it! Once these code changes are checked in, Github Actions will get scheduled per your cron settings in `update-nb.yaml`. You can monitor the actions from the Actions link in the toolbar at the top of the github link for your repo. You can view the steps inside the `Update Notebooks And Refresh Page` action. The error messages are pretty much explatory.
+* That is basically it! Once these code changes are checked in, Github Actions will get scheduled per your cron settings in `update-nb.yaml`. You can monitor the actions from the Actions link in the toolbar at the top of the github link for your repo. You can view the steps inside the `Update Notebooks And Refresh Page` action. If there are any errors, the messages are pretty explanatory.
