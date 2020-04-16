@@ -1,6 +1,14 @@
+---
+toc: true
+layout: post
+description: Creating auto-updating notebooks and blog posts with FastPages
+categories: [jupyter]
+title: Creating auto-updating notebooks and blog posts with FastPages
+---
+
 # Creating auto-updating notebooks and blog posts with FastPages
 
-* Assumes you have a blog set up using FastPages. If not, you can quickly create one going through the steps listed [here](<https://github.com/fastai/fastpages>). Note that you can create multiple FastPages blogs inside your github account, each in a separate repo.
+* Assumes you have a blog set up using FastPages. If not, you can quickly create one going through the steps listed [here](https://github.com/fastai/fastpages). Note that you can create multiple FastPages blogs inside your github account, each in a separate repo.
 
 * Add an `update-nb.yaml` file to <repo>/.github/workflows in your blog repo. Starting points for this file are: [update-nb.yaml template](https://github.com/github/covid19-dashboard/blob/master/.github/workflows/update-nb.yaml) (or a trimmed version here that does not use issues to trigger or monitor your workflow: [my trimmed template](https://github.com/sanzgiri/covid-19-dashboards/blob/master/.github/workflows/update-nb.yaml)
 
