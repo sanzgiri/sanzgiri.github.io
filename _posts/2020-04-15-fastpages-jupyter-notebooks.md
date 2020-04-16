@@ -24,3 +24,6 @@ title: Creating auto-updating notebooks and blog posts with FastPages
 * Add the notebooks to directory `<repo>/_notebooks`. Specific rules for how to customize your notebook so that it looks "good" when coverted to a blog post can be seen here: [Notebook commands for FastPages](https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter)
 
 * That is basically it! Once these code changes are checked in, Github Actions will get scheduled per your cron settings in `update-nb.yaml`. You can monitor the actions from the Actions link in the toolbar at the top of the github link for your repo. You can view the steps inside the `Update Notebooks And Refresh Page` action. If there are any errors, the messages are pretty explanatory.
+
+## References
+* [Github Actions] (https://fastpages.fast.ai/actions/markdown/2020/03/06/fastpages-actions.html)
