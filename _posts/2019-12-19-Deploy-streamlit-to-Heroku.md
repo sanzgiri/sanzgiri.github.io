@@ -33,6 +33,10 @@ heroku ps:scale web=1
 # Connect to your app on xxx.herokuapp.com
 heroku open
 
+# To rename app from xxx.herokuapp.com to newname.herokuapp.com, change app name in settings, then from local repo 
+git remote rm heroku
+heroku git:remote -a <newname>
+
 # To setup custom domain e.g. easyai.ml
 heroku domains add:www.easyai.ml.  # subdomain
 heroku domains add:easyai.ml.      # root domain
