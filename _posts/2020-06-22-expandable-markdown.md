@@ -10,8 +10,8 @@ title: Creating expandable markdown
 
 <details><summary>Click triangle bullet to expand </summary><p>
 
-*  https://www.google.com/
-*  https://www.yahoo.com/
-*  https://www.apple.com/
+* https://www.google.com/
+* https://www.yahoo.com/
+* https://www.apple.com/
 
 </p></details>
