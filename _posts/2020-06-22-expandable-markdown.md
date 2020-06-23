@@ -9,9 +9,7 @@ title: Creating expandable markdown
 # Creating Expandable Markdown
 
 <details><summary>Click triangle bullet to expand </summary><p>
-1. https://www.google.com/
-
-2. https://www.yahoo.com/
-
-3. https://www.apple.com/
+* [Googgle](https://www.google.com/)
+* [Yahoo](https://www.yahoo.com/)
+* [Apple](https://www.apple.com/)
 </p></details>
