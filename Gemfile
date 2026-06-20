@@ -8,9 +8,11 @@ group :jekyll_plugins do
   gem "jekyll-gist"
   gem "jekyll-octicons"
   gem "jekyll-github-metadata"
+  gem "jekyll-titles-from-headings"
 end
 
 gem "kramdown-parser-gfm"
+gem "kramdown-math-katex"
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
