@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ashutosh Sanzgiri — Portfolio</title>
+  <meta name="description" content="Ashutosh Sanzgiri — data science, machine learning, and applied AI projects. Selected work, experiments, and tools." />
+  <link rel="canonical" href="https://sanzgiri.github.io/portfolio/" />
+
+  <!-- OpenGraph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ashutosh Sanzgiri — Portfolio" />
+  <meta property="og:description" content="Data science, machine learning, and applied AI projects." />
+  <meta property="og:url" content="https://sanzgiri.github.io/portfolio/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ashutosh Sanzgiri — Portfolio" />
+  <meta name="twitter:description" content="Data science, machine learning, and applied AI projects." />
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111c33;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --primary: #22d3ee;
+      --secondary: #a855f7;
+      --card-bg: #1e293b;
+      --card-border: #334155;
+      --card-hover: #22d3ee;
+      --max: 72rem;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* --- Sticky nav --- */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.75);
+      border-bottom: 1px solid var(--card-border);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .nav-name { font-weight: 700; letter-spacing: 0.01em; }
+    .nav-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+    .nav-links a { color: var(--muted); font-size: 0.95rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+
+    section { max-width: var(--max); margin: 0 auto; padding: 5rem 1.5rem; }
+
+    /* --- Hero --- */
+    .hero { padding-top: 6rem; padding-bottom: 4rem; }
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .hero .tagline {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    .hero .bio {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 44rem;
+      margin-bottom: 2rem;
+    }
+    .hero .actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.4rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid var(--card-border);
+      transition: all 0.2s;
+    }
+    .btn-primary { background: var(--primary); color: var(--bg); border-color: var(--primary); }
+    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-2px); }
+    .btn-ghost { color: var(--text); }
+    .btn-ghost:hover { border-color: var(--primary); color: var(--primary); }
+
+    /* --- Section headings --- */
+    .section-head { margin-bottom: 2.5rem; }
+    .section-head h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .section-head p { color: var(--muted); }
+    .alt { background: var(--bg-soft); }
+    .alt .section-head h2 { color: var(--secondary); }
+
+    /* --- Projects grid --- */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 0.9rem;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+    }
+    .card:hover {
+      border-color: var(--card-hover);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px -8px rgba(34, 211, 238, 0.18);
+    }
+    .card .eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--secondary);
+      margin-bottom: 0.75rem;
+    }
+    .card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.6rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; flex-grow: 1; margin-bottom: 1.25rem; }
+    .card-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .card-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary);
+      transition: opacity 0.2s;
+    }
+    .card-links a:hover { opacity: 0.7; }
+    .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.25rem; }
+    .tag {
+      font-size: 0.72rem;
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      border-radius: 9999px;
+      padding: 0.2rem 0.65rem;
+    }
+
+    /* --- Contact --- */
+    .contact-links { display: flex; flex-wrap: wrap; gap: 1.25rem; margin-top: 1rem; }
+    .contact-links a {
+      color: var(--text);
+      border: 1px solid var(--card-border);
+      border-radius: 9999px;
+      padding: 0.6rem 1.2rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+    .contact-links a:hover { border-color: var(--primary); color: var(--primary); }
+
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      border-top: 1px solid var(--card-border);
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    footer a { color: var(--primary); }
+
+    /* placeholder marker — remove these as you fill content */
+    .todo { color: #fbbf24; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-name">Ashutosh Sanzgiri</span>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://sanzgiri.github.io/">Blog</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="top">
+    <section style="padding-top:0;">
+      <h1>Ashutosh&nbsp;Sanzgiri</h1>
+      <p class="tagline"><span class="todo">[TAGLINE — e.g. "Data Science &amp; Machine Learning · Applied AI"]</span></p>
+      <p class="bio">
+        <span class="todo">[BIO — 2–4 sentences. Who you are, what you build, what you focus on.
+        e.g. "I build machine learning systems and data products. My work spans
+        applied AI, NLP, and turning research into usable tools."]</span>
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#projects">View projects</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </section>
+  </header>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <section id="projects">
+    <div class="section-head">
+      <h2>Selected projects</h2>
+      <p>A few things I've built and shipped.</p>
+    </div>
+
+    <div class="grid">
+
+      <!-- Project: Thinking Tools -->
+      <article class="card">
+        <div class="eyebrow">Web app · Philosophy</div>
+        <h3>Dennett's Thinking Tools</h3>
+        <div class="tags">
+          <span class="tag">Next.js</span>
+          <span class="tag">TypeScript</span>
+          <span class="tag">Ollama</span>
+        </div>
+        <p>
+          An interactive collection of 77 "intuition pumps" and tools for thinking
+          from Daniel Dennett's book, each with a practical exercise. Content is
+          generated with a local LLM and served as a static site.
+        </p>
+        <div class="card-links">
+          <a href="https://tools-for-thinking.netlify.app/" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="https://github.com/sanzgiri/thinking_tools" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <!-- Project: ChatGPT Slackbot -->
+      <article class="card">
+        <div class="eyebrow">LLM · Bot</div>
+        <h3>ChatGPT Slack Bot</h3>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">OpenAI</span>
+          <span class="tag">Slack API</span>
+        </div>
+        <p>
+          A Slack bot that brings ChatGPT into your workspace — ask questions and
+          get LLM responses inline in any channel or DM. My most-starred project.
+        </p>
+        <div class="card-links">
+          <a href="https://github.com/sanzgiri/chatgpt_slackbot" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <!-- Project: Cartoonify -->
+      <article class="card">
+        <div class="eyebrow">Computer vision</div>
+        <h3>Cartoonify</h3>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">Streamlit</span>
+        </div>
+        <p>
+          Turn photographs into cartoon-style images using classic computer-vision
+          techniques, wrapped in a simple interactive app.
+        </p>
+        <div class="card-links">
+          <a href="https://github.com/sanzgiri/cartoonify" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <!-- Project: universs -->
+      <article class="card">
+        <div class="eyebrow">Web app · AI/ML</div>
+        <h3>universs</h3>
+        <div class="tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">Vercel</span>
+        </div>
+        <p>
+          A news aggregator surfacing the latest AI &amp; ML stories in one clean,
+          fast feed.
+        </p>
+        <div class="card-links">
+          <a href="https://universs-xi.vercel.app" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="https://github.com/sanzgiri/universs" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <!-- Project: Three Clues Guessing -->
+      <article class="card">
+        <div class="eyebrow">Web app · Game</div>
+        <h3>Three Clues Guessing</h3>
+        <div class="tags">
+          <span class="tag">TypeScript</span>
+          <span class="tag">Render</span>
+        </div>
+        <p>
+          A word-guessing game inspired by the IIT Connexions game: deduce the
+          answer from three progressively revealing clues.
+        </p>
+        <div class="card-links">
+          <a href="https://threecluesguessing.onrender.com/" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="https://github.com/sanzgiri/ThreeCluesGuessing" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+      <!-- Project: Bluesky Daily Digest -->
+      <article class="card">
+        <div class="eyebrow">Data · Automation</div>
+        <h3>Bluesky Daily Digest</h3>
+        <div class="tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">GitHub Pages</span>
+        </div>
+        <p>
+          An automated daily digest of top Bluesky posts from curated authors and
+          topics, published as a static site.
+        </p>
+        <div class="card-links">
+          <a href="https://sanzgiri.github.io/bluesky-daily-digest/" target="_blank" rel="noopener">Live site ↗</a>
+          <a href="https://github.com/sanzgiri/bluesky-daily-digest" target="_blank" rel="noopener">Source ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="alt">
+    <div class="section-head">
+      <h2>About</h2>
+    </div>
+    <p class="bio" style="max-width:52rem;">
+      <span class="todo">[ABOUT — a longer paragraph. Background, interests, current focus,
+      and anything you want collaborators or recruiters to know. You can also mention
+      your blog at sanzgiri.github.io.]</span>
+    </p>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="section-head">
+      <h2>Contact</h2>
+      <p>For collaborations, applied AI / ML work, or to say hello.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:sanzgiri@gmail.com">Email</a>
+      <a href="https://github.com/sanzgiri" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/sanzgiri/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter.com/sanzgiri" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://sanzgiri.github.io/" target="_blank" rel="noopener">Blog</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Ashutosh Sanzgiri · Built with plain HTML/CSS · <a href="https://sanzgiri.github.io/">Blog</a></p>
+  </footer>
+</body>
+</html>
